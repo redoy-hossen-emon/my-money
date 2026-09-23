@@ -7,8 +7,8 @@ import { redirect } from "next/navigation";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Spent money | Pennywise",
-  description: "Record a new expense in Pennywise.",
+  title: "Spent money | my-money",
+  description: "Record a new expense in my-money.",
 };
 
 export const dynamic = "force-dynamic";

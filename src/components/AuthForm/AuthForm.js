@@ -36,7 +36,7 @@ export default function AuthForm({ mode }) {
   return (
     <div className={styles.card}>
       <div className={styles.mark}>P</div>
-      <p className={styles.eyebrow}>Pennywise</p>
+      <p className={styles.eyebrow}>my-money</p>
       <h1>{isRegister ? "Create your account" : "Welcome back"}</h1>
       <p className={styles.description}>{isRegister ? "Start making your money easier to understand." : "Sign in to see your personal money overview."}</p>
       <form onSubmit={submit}>
@@ -46,7 +46,7 @@ export default function AuthForm({ mode }) {
         {error && <p className={styles.error} role="alert">{error}</p>}
         <button className={styles.submit} disabled={isLoading} type="submit">{isLoading ? "Please wait..." : isRegister ? "Create account" : "Log in"}</button>
       </form>
-      <p className={styles.switch}>{isRegister ? "Already have an account?" : "New to Pennywise?"} <Link href={isRegister ? "/login" : "/register"}>{isRegister ? "Log in" : "Register"}</Link></p>
+      <p className={styles.switch}>{isRegister ? "Already have an account?" : "New to my-money?"} <Link href={isRegister ? "/login" : "/register"}>{isRegister ? "Log in" : "Register"}</Link></p>
     </div>
   );
 }

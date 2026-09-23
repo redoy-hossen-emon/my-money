@@ -7,8 +7,8 @@ import { redirect } from "next/navigation";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Reports | Pennywise",
-  description: "Review all income and expenses in Pennywise.",
+  title: "Reports | my-money",
+  description: "Review all income and expenses in my-money.",
 };
 
 export default async function ReportsPage() {

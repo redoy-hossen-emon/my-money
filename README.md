@@ -171,3 +171,42 @@ The default Next.js starter pages and SVG assets were removed once the finance d
 - Restrict MongoDB Atlas network access to trusted IP ranges.
 - Rotate any database password that has been exposed during development.
 - Never commit `.env` or paste real credentials into documentation.
+
+## Android APK With Capacitor
+
+This project is prepared as a Capacitor WebView app on the `feature/capacitor-android` branch. Since the Next.js app uses server-rendered pages, API routes, sessions, and MongoDB, the APK must load a deployed Next.js URL. A static export would not include the application server or database API.
+
+### 1. Install Android tooling
+
+Install Android Studio and its Android SDK. Make sure Java, `adb`, and the Android SDK tools are available in your terminal. Open Android Studio once so it can finish installing the SDK and accept licenses.
+
+### 2. Choose the WebView URL
+
+For an Android emulator using a local Next.js server, start the app with:
+
+```powershell
+$env:CAPACITOR_SERVER_URL="http://10.0.2.2:3000"
+npm run dev
+```
+
+For a physical device, use your computer's LAN address instead, for example `http://192.168.1.20:3000`, and allow that port through the firewall. For a release APK, use an HTTPS deployment URL:
+
+```powershell
+$env:CAPACITOR_SERVER_URL="https://your-deployed-domain.example"
+```
+
+Do not ship an APK pointing at `localhost`; on a phone, `localhost` means the phone itself.
+
+### 3. Add and sync Android
+
+Run these commands once:
+
+```powershell
+npm run cap:add:android
+npm run cap:sync
+npm run cap:open:android
+```
+
+Build or run the app from Android Studio. After web changes, restart or deploy the Next.js server and run `npm run cap:sync` when native configuration changes.
+
+The app identifier is `com.mymoney.app`. Change it in `capacitor.config.ts` before publishing if a different application ID is required.

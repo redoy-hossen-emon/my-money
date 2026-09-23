@@ -1,8 +1,8 @@
 import crypto from "node:crypto";
 import { cookies } from "next/headers";
 
-const COOKIE_NAME = "pennywise_session";
-const secret = process.env.AUTH_SECRET || process.env.MONGODB_URI || "pennywise-development-secret";
+const COOKIE_NAME = "my-money_session";
+const secret = process.env.AUTH_SECRET || process.env.MONGODB_URI || "my-money-development-secret";
 
 function sign(value) {
   return crypto.createHmac("sha256", secret).update(value).digest("hex");

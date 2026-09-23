@@ -82,7 +82,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Link className={styles.brand} href="/" aria-label="Pennywise home">
+      <Link className={styles.brand} href="/" aria-label="my-money home">
         <span className={styles.brandMark}>M</span>
         <span>My Money</span>
       </Link>
