@@ -1,0 +1,27 @@
+.backLink { display: inline-flex; align-items: center; gap: 8px; color: #93a69d; font-size: 13px; font-weight: 650; transition: color 160ms ease, transform 160ms ease; }
+.backLink:hover, .backLink:focus-visible { outline: none; color: #e8f0eb; transform: translateX(-3px); }
+.backLink span { color: #f4a261; font-size: 18px; }
+.intro { margin: 48px 0 32px; }
+.eyebrow, .panelHeading p { margin-bottom: 14px; color: #f4a261; font-size: 11px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+.intro h1 { margin-bottom: 12px; font-size: clamp(38px, 9vw, 62px); font-weight: 650; letter-spacing: -0.065em; line-height: 0.98; }
+.intro > p:last-child { color: #93a69d; font-size: 15px; line-height: 1.6; }
+.form { display: grid; gap: 16px; max-width: 760px; }
+.panel { padding: 26px; border: 1px solid #263b38; border-radius: 16px; background: rgba(20, 33, 32, 0.82); }
+.panelHeading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.panelHeading p { margin-bottom: 8px; }
+.panelHeading h2 { color: #e8f0eb; font-size: 21px; font-weight: 650; letter-spacing: -0.03em; }
+.panelNumber { color: #668178; font-family: var(--font-geist-mono), monospace; font-size: 12px; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.fields label { display: grid; gap: 8px; color: #a9bbb1; font-size: 12px; font-weight: 650; }
+.fields input { width: 100%; padding: 12px 13px; border: 1px solid #34504a; border-radius: 8px; outline: none; background: #101e1d; color: #e8f0eb; font-size: 14px; transition: border-color 160ms ease, box-shadow 160ms ease; }
+.fields input:focus { border-color: #8dd3a8; box-shadow: 0 0 0 3px rgba(141, 211, 168, 0.12); }
+.fields input:disabled { opacity: 0.6; }
+.helper { margin: -10px 0 20px; color: #81968b; font-size: 12px; }
+.actions { display: flex; align-items: center; justify-content: flex-end; gap: 18px; min-height: 44px; }
+.actions button { padding: 12px 18px; border: 0; border-radius: 8px; background: #f4a261; color: #163b36; cursor: pointer; font-size: 13px; font-weight: 750; }
+.actions button:hover, .actions button:focus-visible { outline: none; background: #ffb477; }
+.actions button:disabled { cursor: wait; opacity: 0.55; }
+.success, .error { font-size: 12px; }
+.success { color: #8dd3a8; }
+.error { color: #ef8b83; }
+@media (max-width: 560px) { .intro { margin-top: 42px; } .panel { padding: 20px; } .fields { grid-template-columns: 1fr; } .actions { align-items: stretch; flex-direction: column-reverse; } .actions button { width: 100%; } }

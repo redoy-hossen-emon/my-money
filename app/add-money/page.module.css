@@ -1,0 +1,259 @@
+.page {
+  min-height: 100vh;
+  background: #0c1414;
+  color: #e8f0eb;
+}
+
+.main {
+  width: min(100% - 32px, 720px);
+  margin: 0 auto;
+  padding: 36px 0 160px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #93a69d;
+  font-size: 13px;
+  font-weight: 650;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  outline: none;
+  color: #e8f0eb;
+  transform: translateX(-3px);
+}
+
+.backLink span {
+  color: #f08f55;
+  font-size: 18px;
+}
+
+.intro {
+  margin: 48px 0 32px;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+  color: #f08f55;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin-bottom: 12px;
+  font-size: clamp(38px, 9vw, 62px);
+  font-weight: 650;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.intro p:last-child {
+  max-width: 420px;
+  color: #93a69d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form {
+  padding: 22px;
+  border: 1px solid #e4e9e1;
+  border-radius: 18px;
+  background: #fffefa;
+  box-shadow: 0 16px 35px rgba(28, 57, 49, 0.05);
+}
+
+.amountField {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8ede6;
+}
+
+.field,
+.amountField {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.field label,
+.amountField label {
+  color: #38544d;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.field label span {
+  margin-left: 5px;
+  color: #a2aea8;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.amountInput {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid #dfe7df;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #9aaa9f;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.amountInput span {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.amountInput input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #163b36;
+  font: inherit;
+  font-size: 40px;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  outline: none;
+}
+
+.amountInput:focus-within {
+  border-color: #83a999;
+  box-shadow: 0 0 0 3px rgba(131, 169, 153, 0.16);
+}
+
+.amountInput input::placeholder {
+  color: #c5cec7;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 16px;
+  padding: 25px 0;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid #dfe7df;
+  border-radius: 9px;
+  background: #fbfcf9;
+  color: #254842;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field input,
+.field select {
+  height: 45px;
+  padding: 0 12px;
+}
+
+.field textarea {
+  min-height: 88px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #83a999;
+  box-shadow: 0 0 0 3px rgba(131, 169, 153, 0.16);
+}
+
+.field textarea::placeholder {
+  color: #a8b5ae;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 27px;
+}
+
+.cancel,
+.actions button {
+  display: inline-flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cancel {
+  padding: 0 16px;
+  color: #71807a;
+}
+
+.cancel:hover,
+.cancel:focus-visible {
+  outline: none;
+  color: #163b36;
+}
+
+.actions button {
+  gap: 10px;
+  padding: 0 18px;
+  border: 0;
+  background: #163b36;
+  color: #fffefa;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.actions button:hover,
+.actions button:focus-visible {
+  outline: none;
+  background: #285c51;
+  box-shadow: 0 7px 16px rgba(22, 59, 54, 0.16);
+  transform: translateY(-2px);
+}
+
+.actions button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+@media (max-width: 520px) {
+  .main {
+    padding-top: 27px;
+  }
+
+  .intro {
+    margin-top: 42px;
+  }
+
+  .form {
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .cancel,
+  .actions button {
+    flex: 1;
+  }
+}

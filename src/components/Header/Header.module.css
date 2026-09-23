@@ -1,0 +1,47 @@
+.header {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(161, 194, 177, 0.14);
+}
+
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #e8f0eb; font-family: var(--font-geist-sans), sans-serif; font-size: 19px; font-weight: 750; letter-spacing: -0.04em; }
+.brandMark { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 10px 10px 10px 3px; background: #f4a261; color: #163b36; font-size: 17px; font-weight: 800; }
+.nav { display: flex; align-items: center; gap: 30px; color: #93a69d; font-size: 13px; font-weight: 600; }
+.nav a { padding: 29px 0 25px; border-bottom: 2px solid transparent; transition: color 160ms ease, border-color 160ms ease; }
+.nav a:hover, .navLinkActive { color: #e8f0eb; }
+.navLinkActive { border-bottom-color: #f4a261 !important; }
+.headerBalance { display: flex; align-items: baseline; gap: 8px; margin-left: auto; padding: 8px 14px; border-left: 1px solid rgba(161, 194, 177, 0.14); color: #8fa49a; }
+.headerBalance span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.headerBalance strong { color: #f4a261; font-size: 15px; letter-spacing: -0.03em; }
+.headerBalance .negativeBalance { color: #ef6b6b; }
+.profile { position: relative; margin-left: auto; }
+.profileButton { display: inline-flex; align-items: center; gap: 9px; padding: 5px 8px 5px 5px; border: 0; border-radius: 30px; background: transparent; color: #d4e2d9; cursor: pointer; font: inherit; font-size: 13px; font-weight: 650; }
+.profileButton:hover, .profileButton:focus-visible { background: #1b302d; outline: none; }
+.avatar { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; background: #284d45; color: #b4d6c2; }
+.userIcon { width: 21px; height: 21px; }
+.chevron { margin-top: -4px; color: #91a79b; font-size: 17px; }
+.menu { position: absolute; z-index: 2; top: calc(100% + 10px); right: 0; width: 190px; padding: 8px; visibility: hidden; opacity: 0; border: 1px solid #2b4641; border-radius: 12px; background: #142120; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35); transform: translateY(-5px); transition: opacity 160ms ease, transform 160ms ease, visibility 160ms; }
+.menuOpen, .profile:focus-within .menu { visibility: visible; opacity: 1; transform: translateY(0); }
+.menuHeading { padding: 8px 10px 7px; color: #8fa49a; font-size: 10px; font-weight: 750; letter-spacing: 0.09em; text-transform: uppercase; }
+.menuIdentity { display: grid; gap: 3px; padding: 3px 10px 10px; border-bottom: 1px solid rgba(161, 194, 177, 0.14); }
+.menuIdentity strong { overflow: hidden; color: #e8f0eb; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.menuIdentity span { overflow: hidden; color: #8fa49a; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.menu a, .menuSignOut { display: block; width: 100%; padding: 9px 10px; border: 0; border-radius: 7px; background: transparent; color: #c4d5ca; cursor: pointer; font-size: 13px; text-align: left; }
+.menu a:hover, .menu a:focus-visible, .menuSignOut:hover, .menuSignOut:focus-visible { outline: none; background: #1b302d; color: #e8f0eb; }
+.menuSignOut { margin-top: 3px; border-top: 1px solid rgba(161, 194, 177, 0.14); border-radius: 0 0 7px 7px; color: #f2a39a; }
+
+@media (max-width: 680px) {
+  .header { width: min(100% - 32px, 520px); gap: 0; }
+  .nav { display: none; }
+  .headerBalance { margin-left: auto; padding: 6px 10px; }
+  .headerBalance span { display: none; }
+  .headerBalance strong { font-size: 13px; }
+  .profile { margin-left: 4px; }
+  .profileName { display: block; max-width: 68px; overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+}

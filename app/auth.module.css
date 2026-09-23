@@ -1,0 +1,1 @@
+.page { display: grid; min-height: 100vh; place-items: center; padding: 24px 16px; background: radial-gradient(circle at 80% 10%, #193b37 0, #0c1414 38%); }

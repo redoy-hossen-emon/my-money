@@ -1,0 +1,39 @@
+.reportCard { border: 1px solid #263b38; border-radius: 16px; background: #142120; overflow: hidden; }
+.summary { display: flex; justify-content: space-between; gap: 16px; padding: 20px 22px; color: #8fa49a; font-size: 12px; }
+.summary span:last-child { display: flex; gap: 14px; }
+.summary b { font-weight: 700; }
+.incomeText { color: #8dd3a8; }
+.expenseText { color: #f4a261; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 0 16px; padding: 4px; border: 1px solid #29413d; border-radius: 10px; }
+.tabs button { padding: 11px; border: 0; border-radius: 7px; background: transparent; color: #82968d; cursor: pointer; font: inherit; font-size: 13px; font-weight: 750; transition: background 160ms ease, color 160ms ease; }
+.tabs button:hover, .tabs button:focus-visible { outline: none; color: #e8f0eb; }
+.tabs .tabActive { background: #2b5148; color: #e8f0eb; }
+.tabs button span { margin-left: 5px; color: #8fa49a; font-size: 11px; }
+.swipeHint { padding: 15px 22px 5px; color: #6e8479; font-size: 10px; text-align: center; }
+.panels { min-height: 190px; padding: 8px 22px 18px; touch-action: pan-y; }
+.list { display: grid; }
+.transaction { display: flex; align-items: center; gap: 13px; padding: 16px 0; border-bottom: 1px solid #263b38; }
+.transaction:last-child { border-bottom: 0; }
+.transactionIcon { display: grid; width: 35px; height: 35px; flex: 0 0 35px; place-items: center; border-radius: 11px; font-size: 19px; font-weight: 700; }
+.incomeIcon { background: rgba(141, 211, 168, 0.14); color: #8dd3a8; }
+.expenseIcon { background: rgba(244, 162, 97, 0.14); color: #f4a261; }
+.transactionMain { display: grid; min-width: 0; flex: 1; gap: 4px; }
+.transactionMain strong { overflow: hidden; color: #e8f0eb; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.transactionMain span, .transactionMain small { overflow: hidden; color: #82968d; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.transactionMain small { color: #a1b3a9; }
+.amount { white-space: nowrap; font-size: 14px; }
+.incomeAmount { color: #8dd3a8; }
+.expenseAmount { color: #f4a261; }
+.editButton { padding: 6px 8px; border: 1px solid #38564d; border-radius: 6px; background: transparent; color: #93a69d; cursor: pointer; font: inherit; font-size: 10px; font-weight: 700; }
+.editButton:hover, .editButton:focus-visible { outline: none; border-color: #f4a261; color: #f4a261; }
+.editForm { padding: 15px 0; border-bottom: 1px solid #263b38; }
+.editGrid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8px; }
+.editGrid input, .editGrid select { width: 100%; height: 38px; padding: 0 9px; border: 1px solid #2d4843; border-radius: 7px; background: #0f1b1a; color: #d8e6dc; font: inherit; font-size: 12px; outline: none; }
+.editGrid input:focus, .editGrid select:focus { border-color: #83a999; box-shadow: 0 0 0 2px rgba(131,169,153,.15); }
+.editNote { grid-column: span 2; }
+.editError { margin-top: 8px; color: #f09b91; font-size: 11px; }
+.editActions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+.editActions button { padding: 7px 12px; border: 0; border-radius: 6px; background: #f4a261; color: #163b36; cursor: pointer; font: inherit; font-size: 11px; font-weight: 750; }
+.editActions button:last-child { border: 1px solid #38564d; background: transparent; color: #93a69d; }
+.empty { display: grid; min-height: 180px; place-items: center; color: #82968d; font-size: 13px; }
+@media (max-width: 520px) { .summary { display: block; } .summary span:last-child { margin-top: 9px; } .panels { padding-inline: 16px; } .transaction { gap: 8px; flex-wrap: wrap; } .transactionIcon { width: 32px; height: 32px; flex-basis: 32px; } .amount { font-size: 13px; } .editGrid { grid-template-columns: 1fr; } .editNote { grid-column: auto; } }

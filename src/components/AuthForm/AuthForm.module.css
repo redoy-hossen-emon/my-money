@@ -1,0 +1,21 @@
+.card { width: min(100%, 410px); padding: 34px; border: 1px solid #263b38; border-radius: 18px; background: #142120; box-shadow: 0 20px 50px rgba(0,0,0,.28); }
+.mark { display: grid; width: 38px; height: 38px; margin-bottom: 20px; place-items: center; border-radius: 12px 12px 12px 4px; background: #f4a261; color: #163b36; font-size: 21px; font-weight: 800; }
+.eyebrow { margin-bottom: 10px; color: #f4a261; font-size: 11px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.card h1 { margin-bottom: 10px; color: #e8f0eb; font-size: 30px; letter-spacing: -.05em; }
+.description { margin-bottom: 26px; color: #93a69d; font-size: 14px; line-height: 1.5; }
+.field { display: grid; gap: 8px; margin-top: 16px; }
+.field label { color: #c4d5ca; font-size: 12px; font-weight: 700; }
+.field input { width: 100%; height: 45px; padding: 0 12px; border: 1px solid #2d4843; border-radius: 9px; background: #0f1b1a; color: #e8f0eb; outline: none; font: inherit; }
+.field input:focus { border-color: #83a999; box-shadow: 0 0 0 3px rgba(131,169,153,.16); }
+.passwordField { position: relative; }
+.passwordField input { padding-right: 45px; }
+.eyeButton { position: absolute; top: 50%; right: 3px; display: grid; width: 38px; height: 38px; place-items: center; border: 0; border-radius: 7px; background: transparent; color: #93a69d; cursor: pointer; font-size: 18px; transform: translateY(-50%); }
+.eyeButton:hover, .eyeButton:focus-visible { outline: none; background: #1b302d; color: #f4a261; }
+.error { margin-top: 14px; color: #f09b91; font-size: 12px; }
+.submit, .guest { width: 100%; height: 45px; margin-top: 22px; border-radius: 9px; cursor: pointer; font: inherit; font-size: 13px; font-weight: 750; }
+.submit { border: 0; background: #f4a261; color: #163b36; }
+.submit:hover, .submit:focus-visible { outline: none; background: #ffb477; }
+.guest { margin-top: 10px; border: 1px solid #38564d; background: transparent; color: #c4d5ca; }
+.guest:hover, .guest:focus-visible { outline: none; background: #1b302d; }
+.switch { margin-top: 22px; color: #82968d; font-size: 12px; text-align: center; }
+.switch a { color: #f4a261; font-weight: 700; }

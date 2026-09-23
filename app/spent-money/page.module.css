@@ -1,0 +1,10 @@
+.page { min-height: 100vh; background: #0c1414; color: #e8f0eb; }
+.main { width: min(100% - 32px, 720px); margin: 0 auto; padding: 36px 0 160px; }
+.backLink { display: inline-flex; align-items: center; gap: 8px; color: #93a69d; font-size: 13px; font-weight: 650; transition: color 160ms ease, transform 160ms ease; }
+.backLink:hover, .backLink:focus-visible { outline: none; color: #e8f0eb; transform: translateX(-3px); }
+.backLink span { color: #f4a261; font-size: 18px; }
+.intro { margin: 48px 0 32px; }
+.eyebrow { margin-bottom: 14px; color: #f4a261; font-size: 11px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+.intro h1 { margin-bottom: 12px; font-size: clamp(38px, 9vw, 62px); font-weight: 650; letter-spacing: -0.065em; line-height: 0.98; }
+.intro p:last-child { max-width: 420px; color: #93a69d; font-size: 15px; line-height: 1.6; }
+@media (max-width: 520px) { .main { padding-top: 27px; } .intro { margin-top: 42px; } }
